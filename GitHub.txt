@@ -1,0 +1,37 @@
+massive scales
+open source
+developed for liunux projerct requeriments
+most operations are local
+very fast
+acrive community
+----------------------------------------
+key concepts
+•Repository contains all the files, histopry of changes, config managed by gift
+•Thre local states of gift
+	Working direcotry--->All the project files
+	Staging area	--->Holing area that the project hadnt commit jet
+	Commit - Git repository(history)--->all the changes
+•Remote repository(GitHub)
+•Master Branch
+	branches contains commits
+----------------------------------------
+git clone http... =(para clonar el trabajo en el escritorio)
+ls = para ver lo que hay adentro
+git status = nos brinda el status del projecto
+		master branch: es por defoult por un repositorio
+		el branch esta uptedeado
+	este comando es para saber si en alguno lado se realizaron cambios
+	cuando duce Untracked files significa que no ser agregaron a git el trabajo (Working 	Directory)
+git add NombreDelArchivo.txt = pasael archivo al "staging area"
+git commit -m "Adding start text file" = pasa el archivo al repository
+git push origin master = origin se refiere al github copy de nuestro repositorio, master se refiere al 			master y unico branch
+			Tira todo el proiyecto al GitHub
+
+echo "nombre" >> NombreDelArchivo.txt	= para crear un nuevo archivo
+cat NombreDelArchivo.txt = para ver el contenido del arcihvo
+
+----------------------------------------
+Empezando un proyecto - Basic Workflow - Hostory and aliases - Ignorando files no queridos-
+
+git init NombreDelProyecto = para crear un nuevo proyecto (master)
+!!!!!!!!mate NombreDelArchivo.txt = para crear un archivo
