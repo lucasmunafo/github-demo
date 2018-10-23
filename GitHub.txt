@@ -27,7 +27,7 @@ git commit -m "Adding start text file" = pasa el archivo al repository
 git push origin master = origin se refiere al github copy de nuestro repositorio, master se refiere al 			master y unico branch
 			Tira todo el proiyecto al GitHub
 
-echo "nombre" >> NombreDelArchivo.txt	= para crear un nuevo archivo
+echo "contenido" >> NombreDelArchivo.txt	= para crear un nuevo archivo
 cat NombreDelArchivo.txt = para ver el contenido del arcihvo
 
 ----------------------------------------
