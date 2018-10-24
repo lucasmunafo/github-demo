@@ -35,3 +35,12 @@ Empezando un proyecto - Basic Workflow - Hostory and aliases - Ignorando files n
 
 git init NombreDelProyecto = para crear un nuevo proyecto (master)
 !!!!!!!!mate NombreDelArchivo.txt = para crear un archivo
+
+----------------------------------------
+
+mkdir nombre = crea una carpeta nueva
+rm -rf nombreDeLaCarpeta = elimina la carpeta
+mv nobreViejo nombreNuevo = para cambiar el nombre de una carpeta
+git init (dentro de la carpeta) = crea el git dentro de l capeta
+git add . = pasa todos los archivos al stagin area
+git add -A = agrega archivos que solo fieron movidos, renombrados o eliminados (update)
