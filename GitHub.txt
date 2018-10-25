@@ -17,6 +17,7 @@ key concepts
 ----------------------------------------
 git clone http... =(para clonar el trabajo en el escritorio)
 ls = para ver lo que hay adentro
+git ls-files = Muestra todos los archivos trackeados por git
 git status = nos brinda el status del projecto
 		master branch: es por defoult por un repositorio
 		el branch esta uptedeado
@@ -41,6 +42,45 @@ git init NombreDelProyecto = para crear un nuevo proyecto (master)
 mkdir nombre = crea una carpeta nueva
 rm -rf nombreDeLaCarpeta = elimina la carpeta
 mv nobreViejo nombreNuevo = para cambiar el nombre de una carpeta
+
+----------------------------------------
+
 git init (dentro de la carpeta) = crea el git dentro de l capeta
 git add . = pasa todos los archivos al stagin area
 git add -A = agrega archivos que solo fieron movidos, renombrados o eliminados (update)
+git reset HEAD NombreDelArchivo = regresa al satge anterior al archivo
+git checkout -- nombreDelArchivo = para descartar los cambios hechos antes del commit
+
+----------------------------------------
+RENOMBRAR O MOVER
+
+git mv nombreViejo.txt NombreNuevo.txt = cambia el nombre del archivo (si no se hcae con git lo borra y lo crea de nuevo)
+git mv Archivo.txt Carpeta = mueve el archivo a la carpeta
+
+----------------------------------------
+ELIMINAR ARCHIVOS
+
+rm Archivo.txt = elimina un archivo que no fue trackeado por git
+git rm Archivo.tct = elimina un archivo trakeado por git
+
+git checkout -- Archivo = restaura el archivo eliminado
+
+
+
+----------------------------------------
+
+MIRAR LA HISTORIA DE GIT
+
+git log = Muestra la historia de commits.
+git log --abbrev-comit = Muestra la historia con los codigos de commits mas resumido
+git log --oneline --graph --decorate = Muestra los commits mas lindos
+git log nroCommit...NroOtroCommit = muestra git entre rangos
+git log --since="3 days ago" = Muestra hits hace 3 dias
+git log -- Archivo.txt = mestra los commits de un cierto archivo
+git log --follow -- folder/folder/archivo.txt = muestra a traves de los renombres
+
+----------------------------------------
+
+
+
+----------------------------------------
