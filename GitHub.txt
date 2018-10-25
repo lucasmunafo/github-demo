@@ -78,9 +78,12 @@ git log nroCommit...NroOtroCommit = muestra git entre rangos
 git log --since="3 days ago" = Muestra hits hace 3 dias
 git log -- Archivo.txt = mestra los commits de un cierto archivo
 git log --follow -- folder/folder/archivo.txt = muestra a traves de los renombres
+git show nroCompletoCommit = mestra de manera especifia lo que se hizo en ese commit
 
 ----------------------------------------
+GIT IGNORE (exluir archivos no deseados)
 
-
+npp(el editor de texto) .gitignore = adentro se esriben todos lo sarchivos que se quieren ignorar,
+					para ignorar toda una carpeta escribir en este archivo Carpeta/
 
 ----------------------------------------
