@@ -87,3 +87,21 @@ npp(el editor de texto) .gitignore = adentro se esriben todos lo sarchivos que s
 					para ignorar toda una carpeta escribir en este archivo Carpeta/
 
 ----------------------------------------
+
+git pull origin master = trae de nuevo todo el repositorio
+git push origin master = lleva todo el repositorio a gut hub
+
+----------------------------------------
+
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+----------------------------------------
+
+
+----------------------------------------
