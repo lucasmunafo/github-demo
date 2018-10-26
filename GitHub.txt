@@ -93,7 +93,7 @@ git push origin master = lleva todo el repositorio a gut hub
 
 ----------------------------------------
 MODIFICACIONES A LOS ARCHIVOS
-COMPARACIONES
+COMPARACIONES--------------------------
 
 --DIFERENCIAS ENTRE TRABAJANDO Y ADD
 git diff = muestra la diferencia entre los archivos que estan en el local working directori y lo que fue modificado recientemente
@@ -111,7 +111,7 @@ git difftool --staged HEAD
 ---PARA TODOS LOS CASOS SI SE QUIERE UN DIFF DE UN SOLO ARCHIVO EN ESPECIAL
 git diff - Archivo
 
-----------------------------------------
+
 PARA VER DIFERENCIAS ENTRE COMMITS VIEJOS
 git log --oneline (para ver los commits)
 git diff nroCommit nroComit2 = Diferencias entre commits viejos
@@ -119,10 +119,23 @@ git difftool nroCommit nroComit2 = mismo pero grafico
 
 git diff HEAD HEAD^ = el head menos uno (el mas nuevo a las iz y mas viejo derecha)
 
+
 --DIFERENCIAS ENTRE EL COMMIT HEAD Y EL GITHUB (izquierda local derecha github)
 git diff master origin/master
 git difftool master origin/master
+
+
 ----------------------------------------
+
+BRANCHES--
+git branch -a = Ver los branches actuales
+git branch NombreBranch = para crear un nuevo branch
+git checkout NombreBranch = para cambiar de branch
+git branch -m NombreViejo NombreNuevo = para cambiar el nombre del branch
+git branch -d NombreBranch = para eliminar el branch
+
+--Para crear y moverse directo al branch
+git checkout -b NombreBranch
 
 
 ----------------------------------------
