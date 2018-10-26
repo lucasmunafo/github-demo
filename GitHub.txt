@@ -92,12 +92,36 @@ git pull origin master = trae de nuevo todo el repositorio
 git push origin master = lleva todo el repositorio a gut hub
 
 ----------------------------------------
+MODIFICACIONES A LOS ARCHIVOS
+COMPARACIONES
+
+--DIFERENCIAS ENTRE TRABAJANDO Y ADD
+git diff = muestra la diferencia entre los archivos que estan en el local working directori y lo que fue modificado recientemente
+git difftool = mustra de manera grafica que se modifico en los archivos
+
+-- DIFERENCIAS ENTRE TRABAJANDO Y COMMITED
+git diff HEAD = muestra los archivos que estan siendo trabajados contra los archivos ya commiteados
+git difftool HEAD = lo mismo que el anterior pero de manera grafica
+
+--DIFERENCIAS ENTRE ADD Y COMMITED
+git diff --staged HEAD
+git difftool --staged HEAD
 
 
+---PARA TODOS LOS CASOS SI SE QUIERE UN DIFF DE UN SOLO ARCHIVO EN ESPECIAL
+git diff - Archivo
 
 ----------------------------------------
+PARA VER DIFERENCIAS ENTRE COMMITS VIEJOS
+git log --oneline (para ver los commits)
+git diff nroCommit nroComit2 = Diferencias entre commits viejos
+git difftool nroCommit nroComit2 = mismo pero grafico
 
+git diff HEAD HEAD^ = el head menos uno (el mas nuevo a las iz y mas viejo derecha)
 
+--DIFERENCIAS ENTRE EL COMMIT HEAD Y EL GITHUB (izquierda local derecha github)
+git diff master origin/master
+git difftool master origin/master
 ----------------------------------------
 
 
