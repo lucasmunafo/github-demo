@@ -1,8 +1,8 @@
 # github-demo
 A simple demo repository to show the basic Git workflow
 
-##Introduccion
+#Introduccion
 
-##Propocito
+#Propocito
 
-##How To
+#How To
