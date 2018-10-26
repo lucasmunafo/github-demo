@@ -136,6 +136,7 @@ git branch NombreBranch = para crear un nuevo branch
 git checkout NombreBranch = para cambiar de branch
 git branch -m NombreViejo NombreNuevo = para cambiar el nombre del branch
 git branch -d NombreBranch = para eliminar el branch
+git branch -D NombreBranch = para eliminarlo de todos modos
 
 --Para crear y moverse directo al branch
 git checkout -b NombreBranch
@@ -143,8 +144,18 @@ git checkout -b NombreBranch
 
 --Para agregar los cambios del branch al master
 git merge NombreBranch
+git merge NombreBranch --no-ff = para ver el cambio de branch
+
+----------------------------------------
+GIT TAGGING
+
+git tag -a nombreetiqueta = para hacer etiquetas
+git how nombreEtiqueta = muestra la etiqueta y su info
 
 ----------------------------------------
 
+git fetch origin otrobranch = va a descargar las referencias de lo que se modifico en ese branch
 
-----------------------------------------
+
+--PARA HELP
+git help stash
