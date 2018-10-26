@@ -51,6 +51,9 @@ git add -A = agrega archivos que solo fieron movidos, renombrados o eliminados (
 git reset HEAD NombreDelArchivo = regresa al satge anterior al archivo
 git checkout -- nombreDelArchivo = para descartar los cambios hechos antes del commit
 
+--Para add y commit al mismo tiempo
+git commit -am "mensaje"
+
 ----------------------------------------
 RENOMBRAR O MOVER
 
@@ -137,6 +140,9 @@ git branch -d NombreBranch = para eliminar el branch
 --Para crear y moverse directo al branch
 git checkout -b NombreBranch
 
+
+--Para agregar los cambios del branch al master
+git merge NombreBranch
 
 ----------------------------------------
 
