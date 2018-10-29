@@ -146,6 +146,13 @@ git checkout -b NombreBranch
 git merge NombreBranch
 git merge NombreBranch --no-ff = para ver el cambio de branch
 
+--Para agreagar cambios a otro brench
+git rebase NombreBrench = para guardar cambios de un branch a otro
+
+--CUANDO HAY PROBLEMAS DE MERGING (MERGETOOL)
+git mergetool = para resolver los problemas de merging
+
+
 ----------------------------------------
 GIT TAGGING
 
