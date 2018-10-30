@@ -148,21 +148,75 @@ git merge NombreBranch --no-ff = para ver el cambio de branch
 
 --Para agreagar cambios a otro brench
 git rebase NombreBrench = para guardar cambios de un branch a otro
+git rebase --abort = para abortar el rebase
+git rebase --continue = para continuar con el rebase
+git pull --rebase origin master = para pullear los cambios del remote al branch 
 
 --CUANDO HAY PROBLEMAS DE MERGING (MERGETOOL)
 git mergetool = para resolver los problemas de merging
+
+--Para ver las referencias entre el repo local y remoto(gitHub)
+git fetch origin master
+
+
+----------------------------------------
+STASHING
+
+--Crear Stash
+git stash = hace a un lado los archivos que no se les hizo add y vuelve los cambios como si nada hubiese pasado
+git stash -u = para hacerle stash a archivos nuevos y que estan en el ignore
+git stash save "Descripcion" = guarda el stash con una descripcion
+git stash show stash@{0} = para ver un stash en especifico
+
+
+--Stash a un Branch
+git stash branch Nombre = pasa directamente los archivos no add a un nuevo branch
+
+--Volver Stash
+git stash apply = para volver esos archivos
+git stash apply stash@{1} = para apply a un stash en especial
+git stash list =  muestra los archivos que se les hizo stash
+
+--Eliminar Stash
+git stash drop = elimina los archivos que se les hizo stash
+git stash drop stash@{1} = mismo pero para uno
+git stash clear = limpia toda la lista de stashes
+
+--Apply y Drop
+git stash pop = hace el apply y el drop (agrega y elimina)
+
+----------------------------------------
+
+git reflog = para ver todo lo que hice (el historial)
+git reset HEAD^ = para volver atras a un commit
+git reset NroCommit = va al commit que queres
+
+
+
+----------------------------------------
+
+
 
 
 ----------------------------------------
 GIT TAGGING
 
-git tag -a nombreetiqueta = para hacer etiquetas
-git how nombreEtiqueta = muestra la etiqueta y su info
+git tag myTag = etiqueta con ese nombre
+git tag --list = muestra la lista de etiquetas
+git tag -a nombreetiqueta = para hacer etiquetas con info
+git tag -a nombreetiqueta NroComit = para ponerle una etiqueta a un commit viejo
+git tag -a nombreetiqueta -f NroComit = para cambiar de commit el tag
+git tag --delete nombreDeLaEtiqueta = para borrarla
+git show nombreEtiqueta = muestra la etiqueta y su info
+
+
+git push origin  master --tags = pushear los tags
+git push origin :NombreTag = para sacar de GirHub un tag
 
 ----------------------------------------
 
 git fetch origin otrobranch = va a descargar las referencias de lo que se modifico en ese branch
 
-
+git cherry-pick NroCommit ??????
 --PARA HELP
 git help stash
