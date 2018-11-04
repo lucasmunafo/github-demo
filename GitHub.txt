@@ -144,7 +144,7 @@ git checkout -b NombreBranch
 
 --Para agregar los cambios del branch al master
 git merge NombreBranch
-git merge NombreBranch --no-ff = para ver el cambio de branch
+git merge NombreBranch --no-ff = agrega solo el ultimo commit
 
 --Para agreagar cambios a otro brench
 git rebase NombreBrench = para guardar cambios de un branch a otro
