@@ -1,0 +1,198 @@
+print(elemento in tupla) = imprime true false si el elemento se encuentra en la lista
+tupla.count(elemento) = te cuenta cuantas veces se encuentra el elemento en la tupla
+len(tupla) = cantidad de elementos en la tupla
+tupla=(elemen,) = asi se define una tupla unitaria
+var, var, var=tupla  .. le asigna en ese orden un elemento a cada variable
+-----------------------------
+def nom(*param) = se le pone asterisco cuando no se sabe la cantidad de elementos que va a recibir
+
+------------------------------------DICCIONARIOS----------------
+clave : valor
+
+diciconario={"alemania":"Berlin","calve":"valor"} = asi se decalra
+print(diccionario["clave"]) = para llamarlo por clave
+diccionario["clave"]=valor   = para agregar un elemento mas al diccionario
+del diccionario["Clave"] = para borrar elementos de un diccionario
+diccionario.keys()  = para acceder a las claves
+diccionario.values()  = para acceder a los valores
+len(diccionario)  = largo del diccionario
+
+------------------------------------
+para paresear a string... str(var)
+lower() = pasar a minisculas
+upper() = pasar a mayusculas
+print("hola", end="") = va a imprimir hola y al terminar va a imprimer end
+print(f"el valor es {i}") = lo que permite f es concatenar i dentro del string
+
+------------------------------------CONTINUE, PASS Y ELSE-----------------------
+
+continue = dentro de un bucle puede saltear una iteracion
+pass = para saltear una clase o bucle
+else = dentro de un bucle... se va a ejecutar siempre cuando termina el bucle
+
+------------------------------------GENERADORES
+
+estructuras que extraen valores de una funcion, lo devuelve de uno en uno en un objeto
+|def devuelvepares(lim):
+|num=1
+|  while num<lim
+|     yield num*2
+
+print(next(generador)) = devuelve el siguiente valor dentro del objeto del generador
+
+----yield from elemnto = te devuelve el subElemento del elemento
+
+------------------------------------EXCEPCIONES-----------------------------
+
+try:
+   blblbl
+except ZeroDivisionError as Nombre:
+   blblbl
+exept:
+   para capturar errores en general
+finally:
+   se ejecuta siempre despues de except o try
+-----------
+
+raise NombreExcepcion("mensaje") = crea un error con un mensaje
+
+------------------------------------CLASES
+class nom():
+
+def funcion(self): =para metodos que solo pertenecen a la calse
+
+obj=NomClase()  para instanciar una clase
+
+def __init__(self):  = CONSTRUCTOR
+
+__variable = para ENCAPSULAR --PRIVATE
+__metodo = para encapsular el metodo --Private
+
+--HERENCIA
+calss nom(ClasePadre,otraclase)   = para heredar de otra clase (o para multiples.. le da preferencia al primer heredado)
+
+super().__init__= llama a la calse padre
+isinstance(objeto, clase)   = true false si es una instancia de una clase
+
+------------------------------------CADENAS
+--METODOS STRING
+upper() = pone todo en myuscula
+lower() = pone todo en minusculas
+capitalize() = pone la primera letra en mayus
+count() = cuenta cuantas veces aparece una letra o palabra dentro de un texto/clase
+find() = representa el indice/posicion en el cual aparece un caracter o un grupo de caracteres
+rfind() = lo mismo pero contando desde el final
+isdigit() = true/false dice si es digito
+isalum() = true/false si es alphanumerico
+isalpha() = si hay solo letras
+split() = separ palabras utilizando espacios
+strip() = borra espacios sobrantes al principio y final
+replace() = cambia una palabra o letra por otra dentro de un string
+
+------------------------------------MODULOS
+--IMPORT
+para importar desde otra carpeta o paquete..
+	from Paquete import NomArch
+--PAQUETES
+para que una carpeta funcione como paquete hay que crear en la misma un __init__.py
+
+------------------------------------ARCHIVOS EXTERNOS
+from io import open = para poder abrir el archivo
+archivo=open("archivo.txt","w") = para abrir el txt en modo escritura
+w = modo escritura
+r = modo lectura
+r+ = modo lectura escritura
+a = append abrir modo editar por abajo
+wb = escritura binaria
+rb = lectura binario
+ab+ = append escritura binario
+
+texto=archivo.read() = guardar para poder leer el contenido si se le pasa un numero lee hasta ese caracter
+readline() = lee el archivo linea a linea y lo garda en una lista
+archivo.write(var) = para escribir un archivo
+archivo.close() = cerrar el archivo
+
+--PUNTEROS
+seek(5) = para posicionar el puntero
+
+------------------------------------SERIALIZACION
+biblioteca Pickle
+pickle.dump(VarDatos, varArchivo) = volcado de datos al fichero binario externo
+lista=pickle.load(varArchivo) = carga de los dato del fichero binario externo
+del (vararchivo) = para borrarlo de la memoria
+
+------------------------------------INTERFAZ GRAFICA
+from tkinter import *
+nom=Tk() = para instancirla
+nom.mainloop() = para ejecutar la ventana
+nom.tittle("titulo")
+nom.resizable(true,true) = para resizable ancho y alto
+nom.iconbitmap("nombreico.ico") = para cambiarle el icono
+nom.geometry("650*350") = modificarle tamaño ancho alto
+nom.config(bg="blue") = cambiarle el color al fondo
+nomframe=Frame() = para crear un frame
+nomframe.pack(fill="both", expand="true") = para ponerle el frame a la ventana
+nomframe.config(wiht"", height"")
+
+------------------------------------BBDD
+import sqlite3
+
+Nomconexion=sqlite3.connect("NombreBBDD") = crear la base de datos o conexion
+Nomconexion.close() = cerrar la conecicon
+NomPuntero= Nomconexion.cursor() = para ccrear el puntero con e cual me voy a mover en la BBDD
+
+SOLO SE CREA UNA VEZ! NomPuntero.execute("CREATE TABLE PRODUCTOS (ID INTEGER PRIMARY KEY AUTOINCREMETN, NOMBRE_ARTICULO VARCHAR(50), PRECIO INTEGER, SECCION VARHAR(20))") = para crear una tabla
+
+NomPuntero.execute("INSERT INTO PRODUCTOS VALUES('BALON',15,'DEPORTES')") = Insertar tuplas
+NomPuntero.executemany("INSERT INTO PRODUTOS VALUES (NULL,?,?,?)", NomLista) = para insertar varias tuplas a traves de una lista los ? es para cuantos campos se quieren ingresar. null porque ese campo es una clave
+Nomconexion.commit()  = para ejecutar la queri
+
+NomPuntero.execute("SELECT * FROM PRODUCTOS") = para ver toda la tabla de produtos
+NomLista=NomPuntero.fetchall() = para guardar en la lista todas las tuplas
+
+NomPuntero.execute("UPDATE FROM PRODUCTOS SET PRECIO=35 WHERE NOMBRE_ARTICULO='pelota'") = UPDATE
+NomPuntero.exeute("DELETE FROM PRODUCTOS WHERE ID=5")
+
+------------------------------------FUNCIONES LAMBDA
+es una funcion anonima resumida
+Se usa solo para funciones facies que no son muy complejas
+
+NomFuncion=ambda parametro1,parametro2:("esto es el return") = asi se declara una funcion lambda
+
+------------------------------------FUNCION FITLER
+Comprueba que los elementos de una secuencia(lista) cumple una condicion devolviendo un iterador con los elementos que cumplen con dicha condicion
+Utiliza una condicion en NomFuncion
+
+filter(NomFuncion, varListaAComprobar) = crea un objeto con los elementos de la lista que cumplen con la condicion establecida en una funcion
+
+------------------------------------FUNCION MAP
+Aplica una funcion a cada elemento de una lista iterable (listas, tuplasmetc) devoliendo una lista con los resultados.
+
+lista=map(Funcion,Lista) = Realiza una funcion para cada una elemento de la lista
+
+
+------------------------------------EXPRECIONES REGULARES
+import re = contiene metodos utiles
+buscar en google regular expression operations
+
+re.search(txtABuscar, VarAAnalizar) = para buscar palabras dentro de un texto devuelve un obj
+objEncontrada.start() = devuelve la pos en donde se encontro el txt
+objEncontrada.end() = devuelve la pos en donde termina lo que encontro
+objEncontrada.span() = devuelve una tupla de donde comienza a donde termina el txt encontrado
+
+re.findall(txtABuscar, VarAAnalizar) = devuelve la cantidad de veces que se encontro un txt
+
+--METACARACTERES Y ANCLAS
+^ para los que comienzan con ese nombre
+$ para los que terminan con ese nombre
+perr[oa] para buscar los que varian
+
+--RANGOS
+[o-t] para los que tienen una letra entre la o y la t
+[^0-3] lo mismo pero entre rangos de nuemeros que no cumple con eso por el ^
+[0-3A-B] dos rangos
+".ara" el punto es para cuando ese caracter no importa
+"\d" para buscar numeros
+
+--MATCH Y SEARCH
+re.match("algo", Var, re.IGNORECASE) = devuelve true false por si encuentra o no encuentra
