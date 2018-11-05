@@ -1,9 +1,28 @@
+type(variable) = Dice de que tipo es la variable
+msg="""mensaje""" = Con tres comillas para agregar saltos de línea
+------------------------------------ARREGLOS
+arreglo.append(“”) = Para agregar al final del arreglo
+arreglo.insert(2,elemento)= Agrega el elemento en la pos 2
+arreglo.extend([elemento,elemento…]) = Agrega varios elementos al arreglo
+arreglo.index(elemento)= te dice el índice del elemento
+print(elemento in arreglo)= imprime true si se encuentra en el arreglo
+arreglo.remove(elemento)= elimina el elemento
+arreglo.pop = eleimina el ultimo elemento de la lista
+arreglo1+arreglo2 = suma los arreglos
+------------------------------------TUPLAS
+Tupla=(elem1,elem2,elem3…)
+arreglo=list(tupla) = convierte la tupla en una lista
+tupla=tuple(arreglo) = convierte el arreglo en una lista
+
+------------------------------------
+
+
 print(elemento in tupla) = imprime true false si el elemento se encuentra en la lista
 tupla.count(elemento) = te cuenta cuantas veces se encuentra el elemento en la tupla
 len(tupla) = cantidad de elementos en la tupla
 tupla=(elemen,) = asi se define una tupla unitaria
 var, var, var=tupla  .. le asigna en ese orden un elemento a cada variable
------------------------------
+------------------------------------
 def nom(*param) = se le pone asterisco cuando no se sabe la cantidad de elementos que va a recibir
 
 ------------------------------------DICCIONARIOS----------------
